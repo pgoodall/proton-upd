@@ -5,6 +5,23 @@ pub struct Downloads {
     pub checksum: String,
 }
 
+struct Platform {
+    url: String,
+    checksum: String,
+}
+
+enum Platforms {
+    macos_arm64(Platform),
+    macos_x64(Platform),
+    linux_arm64(Platform),
+    linux_x64(Platform),
+    linux_x64_baseline(Platform),
+    linux_arm64_musl(Platform),
+    linux_x64_musl(Platform),
+    windows_arm64(Platform),
+    windows_x64(Platform),
+}
+
 fn find_table(http_data: &str) -> Option<(Vec<String>, Vec<Vec<String>>)> {
     use scraper::{ElementRef, Html, Selector};
     let css = |selector| Selector::parse(selector).unwrap();
