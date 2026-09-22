@@ -23,12 +23,13 @@ async fn main() -> Result<()> {
     let downloads = parse_downloads(&body)
         .ok_or(anyhow::anyhow!("Failed to parse downloads"))?;
     // println!("Downloads: {:#?}", downloads);
-    for download in downloads {
+    /* for download in downloads {
         println!("Platform: {}", download.platform);
         println!("URL: {}", download.url);
         println!("Checksum: {}", download.checksum);
         println!();
-    }
+    } */
 
+    
     Ok(())
 }

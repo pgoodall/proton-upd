@@ -76,3 +76,7 @@ pub fn parse_downloads(http_data: &str) -> Option<Vec<Downloads>> {
     
     Some(downloads)
 }
+
+pub fn get_file() {
+    
+}
