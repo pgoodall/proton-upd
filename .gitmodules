@@ -1,5 +1,4 @@
 [submodule ".devcontainer"]
 	path = .devcontainer
 	url = git@github.com:Digicratic/rust-devcontainer.git
-[submodule "DbConnector"]
 	branch = main
